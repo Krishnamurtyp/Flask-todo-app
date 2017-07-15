@@ -1,0 +1,34 @@
+{%- extends "template.html" -%}
+{%- block title -%}Home | {{ super() }}{%- endblock -%}
+{% block active_tab %}home{% endblock %}
+
+{%- block content -%}
+<h2>Todo App</h2> <br/>
+<p>Organize your tasks...</p>
+
+<div class="todo-card">
+  <form id="add-todo" action="/add" method="post">
+    <h5>Add new task:</h5>
+    <div class="input-row title">
+      <div class="input-field">
+        <label for="form-title">Title</label>
+        <input id="form-title" type="text" name="title" placeholder="Enter title!" required>
+      </div>
+      <div class="input-field due">
+        <label for="form-due">Due date</label>
+        <input id="form-due" type="date" name="due" required>
+      </div>
+    </div>
+    <label for="form-description">Description</label>
+    <textarea id="form-description" type="text" name="description" placeholder="Enter some detail here!"></textarea>
+
+    <input type="submit" value="Save"/>
+  </form>
+
+  <input id="list-search" type="text" placeholder="&#61442; Filter ..." >
+  <ul id="todo-list"></ul>
+
+</div>
+
+
+{%- endblock -%}

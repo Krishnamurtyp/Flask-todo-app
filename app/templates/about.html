@@ -1,0 +1,23 @@
+{%- extends "template.html" -%}
+{%- block title -%}About | {{ super() }}{%- endblock -%}
+{% block active_tab %}about{% endblock %}
+
+{%- block content -%}
+<h2>About this app</h2>
+<br/>
+<p>
+  Author: Aaron Scheu @HTW-Berlin (aaron.scheu@student.htw-berlin.de) <br/>
+  Matrikelnr: 552534 <br/>
+  Info 3 - SS2017 - Prof. Dr. Zhang
+</p>
+
+<p>
+  This app represents a small demo with Flask and SQLAlchemy based on Python. <br/>
+  You can create todo items with due date, delete them and set each as finished or undone.
+  In addition the listed items can be filtered.
+</p>
+
+
+
+
+{%- endblock -%}
